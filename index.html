@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tropics — Palm Springs Investment Opportunity</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --sand: #F5EDE3;
+  --sand-light: #FBF7F2;
+  --sand-dark: #E8DDD0;
+  --desert: #D4A574;
+  --terracotta: #C2714F;
+  --teal: #1A5C5E;
+  --teal-deep: #0E3D3F;
+  --teal-light: #2A7D80;
+  --midnight: #0F1A1C;
+  --gold: #C9A961;
+  --gold-light: #E2CB8B;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-body: #3D3D3D;
+  --text-muted: #7A7A7A;
+  --green: #2D8B55;
+  --green-light: #E8F5EE;
+  --blue: #2563EB;
+  --blue-light: #EFF6FF;
+  --warm-bg: #FAF5EE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-dark);
+  background: var(--sand-light);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 60px;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--midnight) 40%, #1a2a2c 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(201,169,97,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 70%, rgba(26,92,94,0.2) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  z-index: 2;
+}
+
+.hero-bg-img {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://calientetropics.com/wp-content/uploads/caliente-home-3-1-1024x680.jpg') center center / cover no-repeat;
+  opacity: 0.18; filter: saturate(0.6);
+  z-index: 0;
+}
+
+.palm-deco { position: absolute; z-index: 3; opacity: 0.06; }
+.palm-deco.left {
+  bottom: -10%; left: -5%;
+  width: 500px; height: 700px;
+  background: radial-gradient(ellipse at center, rgba(201,169,97,0.3), transparent 70%);
+  transform: rotate(-15deg);
+}
+.palm-deco.right {
+  top: -10%; right: -8%;
+  width: 600px; height: 800px;
+  background: radial-gradient(ellipse at center, rgba(42,125,128,0.3), transparent 70%);
+  transform: rotate(20deg);
+}
+
+.hero-content { position: relative; z-index: 10; max-width: 1200px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,169,97,0.15);
+  border: 1px solid rgba(201,169,97,0.3);
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 32px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(56px, 8vw, 120px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+.hero-title em { font-style: italic; color: var(--gold); font-weight: 500; }
+
+.hero-subtitle {
+  font-size: 20px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  animation: fadeUp 1s ease 0.6s both;
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease 0.8s both;
+}
+.hero-metric { position: relative; }
+.hero-metric::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 2px;
+  background: var(--gold);
+}
+.hero-metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--white);
+  padding-top: 12px;
+}
+.hero-metric-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.3);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(201,169,97,0.5), transparent);
+}
+
+/* ===================== LAYOUT ===================== */
+.section {
+  padding: 100px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.section-dark {
+  background: var(--midnight);
+  max-width: none;
+  color: var(--white);
+}
+.section-teal {
+  background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+  max-width: none;
+  color: var(--white);
+}
+.section-sand {
+  background: var(--sand);
+  max-width: none;
+}
+.section-warm {
+  background: var(--warm-bg);
+  max-width: none;
+}
+.section-inner { max-width: 1280px; margin: 0 auto; }
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+.section-label.light { color: var(--gold); }
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.section-heading em { font-style: italic; color: var(--terracotta); }
+.section-dark .section-heading em { color: var(--gold); }
+.section-teal .section-heading em { color: var(--gold-light); }
+
+.section-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+.section-dark .section-desc { color: rgba(255,255,255,0.55); }
+.section-teal .section-desc { color: rgba(255,255,255,0.6); }
+
+/* ===================== CARDS & GRIDS ===================== */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.metric-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+.metric-card.accent {
+  background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+  color: var(--white);
+  border: none;
+}
+.metric-card.gold-accent {
+  background: linear-gradient(135deg, #B8941F, var(--gold));
+  color: var(--white);
+  border: none;
+}
+.metric-card-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  margin-bottom: 16px;
+  background: var(--sand);
+  color: var(--teal);
+}
+.metric-card.accent .metric-card-icon { background: rgba(255,255,255,0.15); color: var(--white); }
+.metric-card.gold-accent .metric-card-icon { background: rgba(255,255,255,0.2); color: var(--white); }
+.metric-card-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.metric-card-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.metric-card.accent .metric-card-label { color: rgba(255,255,255,0.6); }
+.metric-card.gold-accent .metric-card-label { color: rgba(255,255,255,0.7); }
+
+/* ===================== TABLES ===================== */
+.data-table-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--white);
+  margin-bottom: 32px;
+}
+.data-table-title {
+  padding: 20px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.data-table-title .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+thead th {
+  text-align: right;
+  padding: 14px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--sand-light);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+thead th:first-child { text-align: left; }
+tbody td {
+  padding: 12px 20px;
+  text-align: right;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-body);
+}
+tbody td:first-child {
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+tbody tr:hover { background: rgba(26,92,94,0.03); }
+tbody tr.row-total td {
+  font-weight: 700;
+  border-top: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
+  background: rgba(26,92,94,0.04);
+}
+tbody tr.row-section td {
+  background: var(--sand);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  padding: 8px 20px;
+}
+.hl { color: var(--green); font-weight: 600; }
+.inv { color: var(--blue); font-weight: 500; }
+.neg { color: var(--terracotta); }
+
+/* ===================== TWO-COL ===================== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===================== SCENARIO CARDS ===================== */
+.scenario-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.scenario-card {
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.scenario-card.primary {
+  background: linear-gradient(160deg, #0F1A1C 0%, #1A3A3C 100%);
+  color: var(--white);
+  border: 2px solid var(--teal-light);
+}
+.scenario-card.contingency {
+  background: linear-gradient(160deg, #2A1A0A 0%, #4A2A10 50%, #1A3A3C 100%);
+  color: var(--white);
+  border: 1px solid rgba(201,169,97,0.2);
+}
+.scenario-card::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,97,0.1), transparent 70%);
+}
+.scenario-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.primary .scenario-tag { background: rgba(42,125,128,0.3); color: var(--teal-light); border: 1px solid rgba(42,125,128,0.4); }
+.contingency .scenario-tag { background: rgba(201,169,97,0.2); color: var(--gold-light); border: 1px solid rgba(201,169,97,0.3); }
+.scenario-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.scenario-metrics { display: flex; flex-direction: column; gap: 16px; }
+.scenario-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.scenario-row-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+.scenario-row-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===================== WATERFALL ===================== */
+.waterfall-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 48px;
+}
+.waterfall-tier {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.3s;
+}
+.waterfall-tier:hover { background: rgba(255,255,255,0.03); }
+.waterfall-tier-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.4;
+}
+.waterfall-tier-desc h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.waterfall-tier-desc p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.waterfall-tier-split {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  color: var(--gold-light);
+}
+
+/* ===================== TIMELINE ===================== */
+.timeline {
+  position: relative;
+  padding-left: 60px;
+  margin-top: 48px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--gold), var(--terracotta));
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.timeline-item:last-child { border: none; margin-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: -48px; top: 4px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 3px solid var(--sand-light);
+  box-shadow: 0 0 0 3px var(--teal);
+}
+.timeline-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--teal);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.timeline-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* ===================== STRATEGY GRID ===================== */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.strategy-item {
+  padding: 32px;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+.strategy-item:hover { background: rgba(0,0,0,0.3); }
+.strategy-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.strategy-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.strategy-item p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+/* ===================== CTA ===================== */
+.cta-section {
+  text-align: center;
+  padding: 120px 60px;
+  background: linear-gradient(135deg, var(--midnight) 0%, var(--teal-deep) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(201,169,97,0.08), transparent 60%);
+}
+.cta-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  position: relative;
+}
+.cta-heading em { font-style: italic; color: var(--gold); }
+.cta-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  position: relative;
+}
+.cta-steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.cta-step {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  min-width: 240px;
+  text-align: left;
+}
+.cta-step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.cta-step h4 {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cta-step p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  padding: 40px 60px;
+  background: var(--midnight);
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ===================== PHOTO BREAKS & IMAGERY ===================== */
+.photo-break {
+  width: 100%; height: 400px; position: relative; overflow: hidden;
+}
+.photo-break img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.85) contrast(1.05);
+}
+.photo-break-overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(15,26,28,0.2), rgba(15,26,28,0.4));
+}
+.photo-break-caption {
+  position: absolute; bottom: 24px; right: 32px;
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 15px; color: rgba(255,255,255,0.6); z-index: 2;
+}
+.photo-break.short { height: 280px; }
+
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 4px;
+  margin: 48px 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.g-item { position: relative; overflow: hidden; }
+.g-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.6s ease;
+  filter: saturate(0.8) brightness(0.9);
+}
+.g-item:hover img { transform: scale(1.06); filter: saturate(1) brightness(1); }
+.g-item-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(15,26,28,0.7), transparent);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.g-item:hover .g-item-overlay { opacity: 1; }
+.g-item-overlay span {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 14px; color: rgba(255,255,255,0.8);
+}
+.g-wide { grid-column: span 2; }
+
+.parallax-section {
+  position: relative; height: 420px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.parallax-bg {
+  position: absolute; top: -60px; left: 0; right: 0; bottom: -60px;
+  background-attachment: fixed; background-position: center; background-size: cover;
+}
+.parallax-overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+}
+.parallax-content {
+  position: relative; z-index: 2; max-width: 700px; padding: 40px;
+}
+.parallax-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 50px); font-weight: 700; color: var(--white);
+  line-height: 1.1; margin-bottom: 16px;
+}
+.parallax-content h2 em { font-style: italic; color: var(--gold); }
+.parallax-content p { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+/* ===================== SPECIAL COMPONENTS ===================== */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+.tag.green { background: var(--green-light); color: var(--green); }
+.tag.blue { background: var(--blue-light); color: var(--blue); }
+.tag.gold { background: rgba(201,169,97,0.15); color: var(--gold); }
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  border-radius: 2px;
+  margin: 24px 0;
+}
+
+.pullquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--teal);
+  border-left: 4px solid var(--gold);
+  padding: 20px 0 20px 32px;
+  margin: 40px 0;
+  max-width: 700px;
+}
+.section-dark .pullquote { color: var(--gold-light); border-color: var(--teal-light); }
+
+.flag-box {
+  background: rgba(201,169,97,0.08);
+  border: 1px solid rgba(201,169,97,0.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.flag-box h4 { font-size: 15px; margin-bottom: 6px; }
+.flag-box p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+.proforma-scroll { overflow-x: auto; }
+.proforma-scroll table { min-width: 1000px; }
+
+/* Why Now box */
+.why-now-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+.why-now-item {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+}
+.why-now-item h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--teal-deep);
+}
+.why-now-item p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.why-now-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .hero { padding: 60px 24px; }
+  .section { padding: 60px 24px; }
+  .two-col, .scenario-cards, .strategy-grid, .three-col, .why-now-grid { grid-template-columns: 1fr; }
+  .hero-metrics { gap: 24px; }
+  .waterfall-tier { grid-template-columns: 50px 1fr; }
+  .waterfall-tier-split { grid-column: 2; text-align: left; }
+  .cta-section { padding: 80px 24px; }
+  .photo-break { height: 240px; }
+  .photo-break.short { height: 180px; }
+  .gallery-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 180px 180px; }
+  .gallery-mosaic .g-wide { grid-column: span 1; }
+  .parallax-section { height: 320px; }
+  .parallax-bg { background-attachment: scroll; }
+}
+</style>
+</head>
+<body>
+
+<!-- =================== HERO =================== -->
+<!-- Commentary #1: Removed 99-year ground lease from hero subtitle -->
+<!-- Commentary #2: Hero metrics now show equity ticket + core investment metrics -->
+<section class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="palm-deco left"></div>
+  <div class="palm-deco right"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="6" r="2" fill="currentColor"/></svg>
+      Confidential Investment Opportunity
+    </div>
+    <h1 class="hero-title">The <em>Tropics</em></h1>
+    <p class="hero-subtitle">A 92-key Polynesian resort on Palm Springs' social corridor. A value-add hospitality play with a proven local operator and a 5-year path to a 27% IRR.</p>
+    <div class="hero-metrics">
+      <div class="hero-metric">
+        <div class="hero-metric-value">$8.0M</div>
+        <div class="hero-metric-label">Purchase Price</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-value">$4.0M</div>
+        <div class="hero-metric-label">Investor Equity</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-value">27.1%</div>
+        <div class="hero-metric-label">Investor IRR</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-value">2.87x</div>
+        <div class="hero-metric-label">Cash Multiple</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-value">19.8%</div>
+        <div class="hero-metric-label">Y4 Cash Yield</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- =================== WHY NOW =================== -->
+<!-- Commentary #20: "Why Now" investment thesis added early in deck -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">Investment Thesis</div>
+    <h2 class="section-heading">Why <em>now</em></h2>
+    <p class="section-desc">A rare convergence of price dislocation, operator expertise, and market timing creates an asymmetric risk-return profile for The Tropics.</p>
+  </div>
+  <div class="why-now-grid reveal">
+    <div class="why-now-item">
+      <div class="why-now-num">01</div>
+      <h4>Exceptional Basis</h4>
+      <p>At a $8M purchase price, The Tropics represents a significant discount to comparable Palm Springs transactions. The Ace Hotel & Swim Club (179 keys) was acquired by JRK Property Holdings in October 2022 at an undisclosed price via their $350M hospitality fund (Hotel Online, Oct 2022). This price dislocation is the deal's built-in margin of safety.</p>
+    </div>
+    <div class="why-now-item">
+      <div class="why-now-num">02</div>
+      <h4>Proven Operator, Local Edge</h4>
+      <p>Las Brisas Hotel Group brings 50+ years of hotel operating experience and 25 years in Palm Springs. Their 90-room BW Plus Las Brisas sustains a 20-point occupancy premium vs. its comp set and delivers a 39% EBITDA margin — the playbook for The Tropics turnaround.</p>
+    </div>
+    <div class="why-now-item">
+      <div class="why-now-num">03</div>
+      <h4>Desert Macro Tailwinds</h4>
+      <p>Palm Springs draws 14.4M visitors annually (Visit Greater Palm Springs / Tourism Economics, 2023 report), generating $7.4B in visitor spending and $9.0B in total economic impact. An influx of $2B+ in capital has elevated the Coachella Valley into a premium leisure destination. Strict zoning and preservation laws limit new supply, boosting value for repositioned assets.</p>
+    </div>
+    <div class="why-now-item">
+      <div class="why-now-num">04</div>
+      <h4>Rate Environment</h4>
+      <p>With the Fed at 3.50–3.75% and further cuts anticipated, the refinance window in 2029–2030 is projected to be favorable. Our 5.00% initial mortgage and 5.75% refi assumptions are conservative relative to the trajectory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== VALUE CREATION ROADMAP =================== -->
+<!-- Commentary #19: Moved earlier in the deck. Enhanced with concept positioning, F&B, tech, wellness, mixology, desert macro -->
+<section class="section" style="padding-top:40px; padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">Business Plan</div>
+    <h2 class="section-heading">The <em>value creation</em> roadmap</h2>
+    <p class="section-desc">A phased, capital-disciplined transformation — from acquisition through repositioning to harvest — engineered around concept positioning, F&B activation, technology, and the broader desert lifestyle economy.</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">YEAR 1–2 · 2026–2027</div>
+      <div class="timeline-title">Acquisition, Design & Renovation</div>
+      <div class="timeline-desc">Close at $8M. LBHG assumes operational control immediately via leasehold assignment. Execute staged $3.75M renovation over two summers to protect peak-season revenue. Deploy concept positioning — the tiki-era nostalgia meets modern design. Install new PMS, revenue management, and tech stack. Occupancy 45–50% during J-curve. Operating reserves cover debt service shortfall.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot" style="background:var(--gold);box-shadow:0 0 0 3px var(--gold);"></div>
+      <div class="timeline-year">YEAR 3 · 2028</div>
+      <div class="timeline-title">Brand Launch & Revenue Ramp</div>
+      <div class="timeline-desc">Independent lifestyle brand launches with curated platform memberships (Design Hotels, Mr & Mrs Smith, Tablet Hotels). Occupancy ramps to 60%. ADR jumps to $208. F&B activation — Polynesian BBQ, craft cocktail program, and poolside programming become the resort's social engine. Wellness programming launches. NOI inflects to $980K.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot" style="background:var(--terracotta);box-shadow:0 0 0 3px var(--terracotta);"></div>
+      <div class="timeline-year">YEAR 4 · 2029</div>
+      <div class="timeline-title">Refinance Event</div>
+      <div class="timeline-desc">NOI of $1,469K supports $16.3M valuation at 9.0% cap. Refi at 65% LTV generates $5.9M+ in net proceeds — significant liquidity event for investors. Occupancy reaches 70%. Mixology and F&B become high-margin profit centers with strong per-cover spend.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">YEAR 5 · 2030</div>
+      <div class="timeline-title">Exit</div>
+      <div class="timeline-desc">Occupancy stabilized at 75%. NOI of $1,921K supports a $21.3M valuation at 9.0% cap. Year 5 sale generates $9.2M in net exit proceeds. Investor IRR: 27.1%. Cash multiple: 2.87x. Total investor distributions: $13.3M on $4.0M invested.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO: CALIENTE TROPICS PROPERTY -->
+<div class="photo-break">
+  <img src="https://calientetropics.com/wp-content/uploads/caliente-home-3-1-1024x680.jpg" alt="Caliente Tropics pool and grounds" loading="lazy">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-caption">100,000 gallon pool on 2.97 acres — Palm Springs' social corridor</div>
+</div>
+
+<!-- =================== OPPORTUNITY =================== -->
+<!-- Commentary #3: Changed "basis" to "entry point" -->
+<!-- Commentary #4: First five = investment metrics, next five = property attributes -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">The Opportunity</div>
+    <h2 class="section-heading">A desert gem at an <em>exceptional entry point</em></h2>
+    <p class="section-desc">The Tropics is a 92-key hotel on 2.97 acres in the heart of Palm Springs' historic Palm Canyon Drive corridor. The $8M purchase price positions well below comparable lifestyle hotel transactions in the market.</p>
+  </div>
+  <!-- Investment metrics (first five cards) -->
+  <div class="metric-grid reveal">
+    <div class="metric-card accent">
+      <div class="metric-card-icon">▲</div>
+      <div class="metric-card-value">$8.0M</div>
+      <div class="metric-card-label">Purchase Price</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">◆</div>
+      <div class="metric-card-value">$13.1M</div>
+      <div class="metric-card-label">Total Investment ($143K/key)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">◎</div>
+      <div class="metric-card-value">$4.0M</div>
+      <div class="metric-card-label">Renovation Budget</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">↗</div>
+      <div class="metric-card-value">27.1%</div>
+      <div class="metric-card-label">Investor IRR (5-Year Exit)</div>
+    </div>
+    <div class="metric-card gold-accent">
+      <div class="metric-card-icon">⌖</div>
+      <div class="metric-card-value">2.87x</div>
+      <div class="metric-card-label">Investor Cash Multiple</div>
+    </div>
+  </div>
+  <!-- Property attributes (next five cards) -->
+  <div class="metric-grid reveal">
+    <div class="metric-card">
+      <div class="metric-card-icon">🏨</div>
+      <div class="metric-card-value">92</div>
+      <div class="metric-card-label">Keys (16 suites · 24 patios)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">🌴</div>
+      <div class="metric-card-value">2.97 ac</div>
+      <div class="metric-card-label">Resort Grounds</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">🏊</div>
+      <div class="metric-card-value">100K gal</div>
+      <div class="metric-card-label">Pool — One of PS's Largest</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">🍹</div>
+      <div class="metric-card-value">3</div>
+      <div class="metric-card-label">F&B Outlets + Wellness Center</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-icon">★</div>
+      <div class="metric-card-value">1964</div>
+      <div class="metric-card-label">Historic Landmark · Rat Pack Era</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROPERTY HISTORY =================== -->
+<!-- Commentary #8: Clarified historical positioning — West Coast, credited both Kaptur and Kimes/Oceanic Arts -->
+<section class="section" style="padding-top:40px;padding-bottom:40px;">
+  <div class="reveal">
+    <div class="section-label">The Property</div>
+    <h2 class="section-heading">A <em>desert landmark</em> since 1964</h2>
+    <p class="section-desc">Built in 1963 and opened in 1964, developed by Ken Kimes as part of his chain of five Polynesian-themed motels across California. Original tiki carvings by Ed Crissman of Oceanic Arts (Whittier, CA) — 24 palm trunk tikis carved on-site. One of the finest remaining examples of tiki and Polynesian-styled hotels from the 1960s in the United States. Frequented by the Rat Pack, Elvis, Nancy Sinatra, and Victor Mature, who held a regular table in the Congo Room steakhouse.</p>
+  </div>
+  <!-- Commentary #9: Removed duplicate images, improved variety -->
+  <div class="gallery-mosaic reveal">
+    <div class="g-item g-wide">
+      <img src="https://calientetropics.com/wp-content/uploads/caliente-home-3-1-1024x680.jpg" alt="Caliente Tropics pool" loading="lazy">
+      <div class="g-item-overlay"><span>100,000 gallon pool — the resort's social engine</span></div>
+    </div>
+    <div class="g-item">
+      <img src="https://calientetropics.com/wp-content/uploads/Caliente-Tropics-by-Ewasko_-401.jpg" alt="Caliente Tropics spa" loading="lazy">
+      <div class="g-item-overlay"><span>12-person clover-shaped spa</span></div>
+    </div>
+    <div class="g-item">
+      <img src="https://calientetropics.com/wp-content/uploads/Caliente-25-compressor-1024x684.jpg" alt="Caliente Tropics event space" loading="lazy">
+      <div class="g-item-overlay"><span>250-person outdoor event space</span></div>
+    </div>
+    <div class="g-item">
+      <img src="https://calientetropics.com/wp-content/uploads/Caliente-12-min-1-1024x684.jpg" alt="Caliente Tropics grounds" loading="lazy">
+      <div class="g-item-overlay"><span>2.97 acres of lush resort grounds</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== DEAL STRUCTURE =================== -->
+<!-- Commentary #5: Fixed fee percentage alignment -->
+<!-- Commentary #7: Revised terminology for debt and equity labels -->
+<section class="section section-sand" style="padding-top:60px;">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Deal Structure</div>
+      <h2 class="section-heading">Sources & <em>Uses</em></h2>
+    </div>
+    <div class="two-col reveal">
+      <div class="data-table-wrap">
+        <div class="data-table-title"><div class="dot"></div>Uses of Funds ($000s)</div>
+        <table>
+          <thead><tr><th>Item</th><th>Amount</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>Purchase Price</td><td>$8,000</td><td>63.2%</td></tr>
+            <tr><td>Renovation (CapEx)</td><td>$3,750</td><td>29.6%</td></tr>
+            <tr><td>Projected Soft Costs</td><td>$250</td><td>2.0%</td></tr>
+            <tr><td>Legal / Due Diligence</td><td>$75</td><td>0.6%</td></tr>
+            <tr><td>Operating Reserves</td><td>$592</td><td>4.7%</td></tr>
+            <tr class="row-total"><td>All-In Cost</td><td>$12,667</td><td>100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="data-table-wrap">
+        <div class="data-table-title"><div class="dot" style="background:var(--gold)"></div>Sources of Funds ($000s)</div>
+        <table>
+          <thead><tr><th>Source</th><th>Amount</th><th>%</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Senior Debt</td><td>$8,167</td><td>64.5%</td><td style="font-family:Outfit;font-size:12px;color:var(--text-muted)">5.00%, 25yr amort</td></tr>
+            <tr><td>Investor Equity</td><td class="inv">$4,000</td><td>31.6%</td><td style="font-family:Outfit;font-size:12px;color:var(--text-muted)">70% ownership · 8% pref</td></tr>
+            <tr><td>Sponsor Equity (LBHG)</td><td>$500</td><td>3.9%</td><td style="font-family:Outfit;font-size:12px;color:var(--text-muted)">30% ownership · capital + sweat</td></tr>
+            <tr class="row-total"><td>Total Sources</td><td>$12,667</td><td>100%</td><td></td></tr>
+          </tbody>
+        </table>
+        <div style="padding:16px 20px;font-size:13px;color:var(--text-muted);border-top:1px solid rgba(0,0,0,0.04);">
+          <strong>Debt assumptions:</strong> $8,167K senior debt at 5.00%, 25yr amort (64.5% of total project cost). Year 4 refi at 5.75% (65% LTV on 9.0% cap value). Exit Year 5 at 9.0% cap, 4% sale costs.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EQUITY WATERFALL =================== -->
+<!-- Commentary #6 & #10: Revised equity structure to 70/30 with ROFR buy-up -->
+<section class="section section-dark">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label light">Investor Economics</div>
+      <h2 class="section-heading">Investor-first <em>alignment</em></h2>
+      <p class="section-desc">Investor contributes $4.0M (70% ownership) / LBHG contributes $500K (30% ownership). Total equity: $4.5M. Structured to protect investor capital first, with a clear path to sponsor buy-up post-refinance.</p>
+    </div>
+    <div class="waterfall-tiers reveal">
+      <div class="waterfall-tier">
+        <div class="waterfall-tier-num">01</div>
+        <div class="waterfall-tier-desc">
+          <h4>8% Current-Pay Preferred Return</h4>
+          <p>Investors receive first claim on all distributable cash flow up to an 8% annual return, paid prior to any sponsor distributions</p>
+        </div>
+        <div class="waterfall-tier-split">100% → Investor</div>
+      </div>
+      <div class="waterfall-tier">
+        <div class="waterfall-tier-num">02</div>
+        <div class="waterfall-tier-desc">
+          <h4>Operating Cash Flow Split</h4>
+          <p>After the preferred return, remaining distributable cash split 70/30</p>
+        </div>
+        <div class="waterfall-tier-split">70% Investor / 30% LBHG</div>
+      </div>
+      <div class="waterfall-tier">
+        <div class="waterfall-tier-num">03</div>
+        <div class="waterfall-tier-desc">
+          <h4>Refinance Priority</h4>
+          <p>Return investor capital ($4.0M) first, plus any unpaid preferred return. Then return sponsor capital ($500K). Then remaining proceeds 70/30.</p>
+        </div>
+        <div class="waterfall-tier-split">Investor Capital First</div>
+      </div>
+      <div class="waterfall-tier">
+        <div class="waterfall-tier-num">04</div>
+        <div class="waterfall-tier-desc">
+          <h4>Sponsor Buy-Up Option (Post-Refi)</h4>
+          <p>After investor capital + pref are satisfied, LBHG has an ROFR to acquire 21% at FMV (capped at $2.625M) to reach 51% ownership</p>
+        </div>
+        <div class="waterfall-tier-split">Target: LBHG 51% / Investor 49%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== STRATEGY — INDEPENDENT =================== -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">Strategy</div>
+    <h2 class="section-heading">Independent <em>boutique resort</em></h2>
+    <p class="section-desc">The Tropics will operate as an independent lifestyle resort, leveraging its tiki heritage, experiential F&B, and design-forward positioning to command premium rates without franchise fees. Distribution through curated platforms (Design Hotels membership, Mr & Mrs Smith, Tablet Hotels) and a direct booking engine.</p>
+  </div>
+
+  <!-- Single scenario card -->
+  <div class="reveal" style="margin-bottom:32px;">
+    <div style="background:linear-gradient(160deg, #0F1A1C 0%, #1A3A3C 100%);border-radius:20px;padding:48px;border:2px solid rgba(201,169,97,0.2);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(201,169,97,0.1), transparent 70%);"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+        <div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:16px;font-weight:600;">5-Year Investment · Independent Operation</div>
+          <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--white);margin-bottom:24px;">27.1% IRR · 2.87x</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Y3 NOI</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--white);">$980K</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Y4 NOI</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--white);">$1,598K</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Y5 NOI (Exit Year)</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--gold-light);">$1,921K</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Franchise Fees</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--gold-light);">None</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Exit Value (Y5 · 9.0% cap)</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--white);">$21.3M</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Refi at Y4 — Net Proceeds</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--white);">$3,488K</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;"><span style="font-size:13px;color:rgba(255,255,255,0.5);">Net Exit Proceeds (Y5)</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--gold-light);">$9,163K</span></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:16px;font-weight:600;">Pre-Tax Investor Yield (Cash-on-Cash on $4M)</div>
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:13px;color:rgba(255,255,255,0.35);min-width:30px;">Y1</span>
+              <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:var(--terracotta);border-radius:4px;"></div></div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--terracotta);min-width:70px;text-align:right;">−7.8%</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:13px;color:rgba(255,255,255,0.35);min-width:30px;">Y2</span>
+              <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:var(--terracotta);border-radius:4px;"></div></div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--terracotta);min-width:70px;text-align:right;">−8.1%</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:13px;color:rgba(255,255,255,0.5);min-width:30px;font-weight:600;">Y3</span>
+              <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;"><div style="width:35%;height:100%;background:var(--teal-light);border-radius:4px;"></div></div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--teal-light);min-width:70px;text-align:right;font-weight:600;">8.9%</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:13px;color:rgba(255,255,255,0.5);min-width:30px;font-weight:600;">Y4</span>
+              <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;"><div style="width:80%;height:100%;background:var(--gold);border-radius:4px;"></div></div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--gold-light);min-width:70px;text-align:right;font-weight:600;">19.8%</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:14px 0;">
+              <span style="font-size:13px;color:var(--gold-light);min-width:30px;font-weight:600;">Y5</span>
+              <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;"><div style="width:85%;height:100%;background:var(--gold);border-radius:4px;"></div></div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--gold-light);min-width:70px;text-align:right;font-weight:600;">20.8%</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,0.04);border-radius:10px;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6;">
+            Yield = annual operating cash flow to investor (after debt service, before refi/exit events) ÷ $4M investor equity. Y1–Y2 negative yields covered by operating reserves. Yield turns positive in Y3 and exceeds 20% by Y5.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX -->
+<div class="parallax-section">
+  <div class="parallax-bg" style="background-image: url('https://calientetropics.com/wp-content/uploads/caliente-home-3-1-1024x680.jpg');"></div>
+  <div class="parallax-overlay" style="background: linear-gradient(135deg, rgba(14,61,63,0.8), rgba(15,26,28,0.7));"></div>
+  <div class="parallax-content">
+    <h2>Independent by <em>design.</em></h2>
+    <p>No franchise fees. No brand mandates. Full control over positioning, pricing, and guest experience — backed by a proven Palm Springs operator with 50+ years of track record.</p>
+  </div>
+</div>
+
+<!-- =================== WHY INDEPENDENT =================== -->
+<section class="section section-teal">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label light">Strategy Rationale</div>
+      <h2 class="section-heading">Why <em>independent</em></h2>
+      <p class="section-desc">Palm Springs is 90%+ leisure. Travelers search by destination and experience, not loyalty program. The Tropics' tiki heritage, experiential F&B, and design-forward positioning are the brand — no franchise needed.</p>
+    </div>
+    <div class="strategy-grid reveal">
+      <div class="strategy-item">
+        <div class="strategy-num">01</div>
+        <h4>No Franchise Fees → Higher NOI</h4>
+        <p>Zero franchise fees vs. 5.5% of room revenue for a branded flag. On $5.7M room revenue, that's $310K+ flowing to the bottom line every year — adding ~$3.4M to exit valuation at a 9% cap rate.</p>
+      </div>
+      <div class="strategy-item">
+        <div class="strategy-num">02</div>
+        <h4>No PIP Obligations</h4>
+        <p>Independent operation avoids brand-mandated renovations ($15–30K/key every 5–7 years). We renovate based on guest feedback and ROI, not corporate checklists.</p>
+      </div>
+      <div class="strategy-item">
+        <div class="strategy-num">03</div>
+        <h4>Curated Distribution</h4>
+        <p>Membership in Design Hotels, Mr & Mrs Smith, and Tablet Hotels provides global visibility to a high-value, experience-seeking audience — without surrendering brand identity or economics.</p>
+      </div>
+      <div class="strategy-item">
+        <div class="strategy-num">04</div>
+        <h4>Direct Booking Engine</h4>
+        <p>Target 40%+ direct bookings by Y3. Direct saves 15–25% vs. OTA commissions. Invest in CRM, retargeting, and a booking engine that converts the resort's social media presence into revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROFORMA =================== -->
+<section class="section section-sand" style="padding-top:60px;">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Operating Proforma</div>
+      <h2 class="section-heading">Five-year <em>revenue engine</em></h2>
+      <p class="section-desc">Independent scenario. Revenue ramps from $3.6M (Y1) to $8.4M (Y5) through occupancy growth (45% → 75%), ADR appreciation, and F&B expansion. No franchise fees.</p>
+    </div>
+    <div class="proforma-scroll reveal">
+      <div class="data-table-wrap">
+        <div class="data-table-title"><div class="dot"></div>Independent Proforma ($000s) — 5-Year Hold</div>
+        <table>
+          <thead><tr><th>($000s)</th><th>Y1<br><small>2026</small></th><th>Y2<br><small>2027</small></th><th>Y3<br><small>2028</small></th><th>Y4<br><small>2029</small></th><th>Y5<br><small>2030</small></th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="6">Operating Metrics</td></tr>
+            <tr><td>Occupancy</td><td>45%</td><td>50%</td><td>60%</td><td>70%</td><td>75%</td></tr>
+            <tr><td>ADR</td><td>$153</td><td>$172</td><td>$208</td><td>$217</td><td>$224</td></tr>
+            <tr><td>RevPAR</td><td>$69</td><td>$86</td><td>$125</td><td>$152</td><td>$168</td></tr>
+            <tr class="row-section"><td colspan="6">Revenue</td></tr>
+            <tr><td>Rooms</td><td>$2,311</td><td>$2,883</td><td>$4,196</td><td>$5,109</td><td>$5,642</td></tr>
+            <tr><td>Food & Beverage</td><td>$1,285</td><td>$1,293</td><td>$1,773</td><td>$2,214</td><td>$2,444</td></tr>
+            <tr><td>Other / Misc</td><td>$45</td><td>$55</td><td>$195</td><td>$234</td><td>$259</td></tr>
+            <tr class="row-total"><td>Total Revenue</td><td>$3,641</td><td>$4,231</td><td>$6,164</td><td>$7,557</td><td>$8,345</td></tr>
+            <tr class="row-section"><td colspan="6">Expenses & Profitability</td></tr>
+            <tr><td>Dept Expenses</td><td>$1,889</td><td>$2,227</td><td>$2,642</td><td>$3,116</td><td>$3,391</td></tr>
+            <tr><td>Undistributed</td><td>$1,088</td><td>$1,298</td><td>$1,573</td><td>$1,702</td><td>$1,792</td></tr>
+            <tr><td>GOP</td><td>$663</td><td>$706</td><td>$1,949</td><td>$2,739</td><td>$3,162</td></tr>
+            <tr><td><strong>GOP %</strong></td><td>18.2%</td><td>16.7%</td><td>31.6%</td><td>36.2%</td><td>37.9%</td></tr>
+            <tr><td>Mgmt Fee (4%)</td><td>$146</td><td>$169</td><td>$247</td><td>$302</td><td>$334</td></tr>
+            <tr><td>Fixed + Ground Lease</td><td>$355</td><td>$393</td><td>$477</td><td>$539</td><td>$579</td></tr>
+            <tr><td>FF&E Reserve (4%)</td><td>—</td><td>—</td><td>$247</td><td>$302</td><td>$334</td></tr>
+            <tr class="row-total"><td>NOI</td><td>$162</td><td>$144</td><td class="hl">$980</td><td class="hl">$1,598</td><td class="hl">$1,921</td></tr>
+            <tr><td>NOI Margin</td><td>4.5%</td><td>3.4%</td><td>15.9%</td><td>21.1%</td><td>23.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ACQUISITION OVERVIEW (Ground Lease) =================== -->
+<!-- Commentary #4 & #18: Ground lease mentioned here (1 of max 2 mentions). Includes blended rate. -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">Acquisition Overview</div>
+    <h2 class="section-heading">BIA 99-year lease — <em>institutional security</em></h2>
+  </div>
+  <div class="two-col reveal">
+    <div>
+      <p style="font-size:16px;line-height:1.7;color:var(--text-body);margin-bottom:24px;">The property sits on Agua Caliente tribal land. The reservation encompasses approximately 28,000 acres in the western Coachella Valley (BIA Palm Springs Agency). The BIA administers approximately 1,175 commercial leases, 7,671 residential subleases, and 11,118 timeshares — roughly 20,000 total leased interests in the Palm Springs area (Epsten APC / BIA data).</p>
+      <p style="font-size:16px;line-height:1.7;color:var(--text-body);margin-bottom:24px;">LBHG assumes operational control immediately via leasehold assignment. Long-term lease security (99-year BIA lease) is pursued during the interim and is a condition precedent to the refinance. A fresh 99-year term essentially eliminates the leasehold discount that would otherwise require a higher exit cap rate.</p>
+      <div class="pullquote" style="font-size:20px;">The 99-year BIA lease is the structural foundation that makes this a bankable deal at institutional terms.</div>
+    </div>
+    <div>
+      <div class="flag-box">
+        <h4>Ground Lease Cost</h4>
+        <p>5% of room revenue + 1.5% of other revenue. <strong>Weighted average blended rate: ~3.5% of total revenue</strong> — a relatively low occupancy cost that supports strong NOI conversion.</p>
+      </div>
+      <div class="flag-box">
+        <h4>BIA Approval Timeline</h4>
+        <p>Typically 6–12 months. GP expects 6 months from LOI. Investor timeline builds in 9–12 months. BIA approval is a closing condition for the refinance.</p>
+      </div>
+      <div class="flag-box">
+        <h4>Tribal Framework</h4>
+        <p>Agua Caliente Reservation — 28,000 acres across Palm Springs, Cathedral City, and Rancho Mirage. ~20,000 active leased interests administered through BIA Palm Springs Agency (BIA.gov). Well-tested legal framework with institutional lender acceptance. Leases may not exceed 99 years per BIA regulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO -->
+<div class="photo-break short">
+  <img src="https://calientetropics.com/wp-content/uploads/Caliente-12-min-1-1024x684.jpg" alt="Caliente Tropics lawn and garden" loading="lazy">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-caption">2.97 acres of resort grounds on Palm Canyon Drive</div>
+</div>
+
+<!-- =================== INVESTOR RETURNS =================== -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">Investor Returns</div>
+    <h2 class="section-heading">Cash flows <em>through the waterfall</em></h2>
+    <p class="section-desc">5-year levered cash flows — independent operation, Year 4 refi, Year 5 exit at 9.0% cap.</p>
+  </div>
+  <div class="reveal">
+    <div class="data-table-wrap">
+      <div class="data-table-title"><div class="dot" style="background:var(--gold)"></div>Independent — 5-Year Hold · Refi at Y4 · Exit at Y5</div>
+      <table>
+        <thead><tr><th>($000s)</th><th>Y1<br><small>2026</small></th><th>Y2<br><small>2027</small></th><th>Y3<br><small>2028</small></th><th>Y4 (Refi)<br><small>2029</small></th><th>Y5 (Exit)<br><small>2030</small></th></tr></thead>
+        <tbody>
+          <tr><td>NOI</td><td>$162</td><td>$144</td><td>$980</td><td>$1,598</td><td>$1,921</td></tr>
+          <tr><td>Debt Service</td><td class="neg">($606)</td><td class="neg">($606)</td><td class="neg">($606)</td><td class="neg">($606)</td><td class="neg">($871)</td></tr>
+          <tr><td>Operating CF</td><td class="neg">($444)</td><td class="neg">($462)</td><td>$374</td><td>$992</td><td>$1,050</td></tr>
+          <tr><td>Refi Proceeds</td><td>—</td><td>—</td><td>—</td><td class="hl">$3,488</td><td>—</td></tr>
+          <tr><td>Exit Proceeds</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="hl">$9,163</td></tr>
+          <tr class="row-total"><td>Total Project CF</td><td class="neg">($444)</td><td class="neg">($462)</td><td>$374</td><td class="hl">$4,480</td><td class="hl">$10,213</td></tr>
+          <tr><td>DSCR</td><td>0.27x</td><td>0.24x</td><td>1.62x</td><td>2.64x</td><td>2.21x</td></tr>
+          <tr><td>Investor Yield (pre-tax)</td><td class="neg">−7.8%</td><td class="neg">−8.1%</td><td class="hl">8.9%</td><td class="hl">19.8%</td><td class="hl">20.8%</td></tr>
+          <tr class="row-total"><td>Investor IRR</td><td colspan="5" style="text-align:center;color:var(--green);font-size:20px;">27.1%</td></tr>
+          <tr class="row-total"><td>Investor Cash Multiple</td><td colspan="5" style="text-align:center;font-size:20px;">2.87x</td></tr>
+        </tbody>
+      </table>
+      <div style="padding:16px 20px;font-size:12px;color:var(--text-muted);border-top:1px solid rgba(0,0,0,0.04);">
+        Investor yield = annual operating cash flow to investor (after DS, 8% pref, 70/30 split) ÷ $4M equity. Y1–Y2 shortfall covered by $592K operating reserves. Refi at Y4: $17.8M value (9.0% cap on $1,598K NOI), 65% LTV, 5.75% rate. Exit at Y5: $21.3M value (9.0% cap on $1,921K NOI), 4% sale costs.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== COMP SET =================== -->
+<!-- Commentary #20: Added comp set and benchmarking -->
+<section class="section section-warm" style="padding-top:60px;">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Market Context</div>
+      <h2 class="section-heading">Comp set & <em>benchmarking</em></h2>
+      <p class="section-desc">The Tropics sits on Palm Springs' famous "social corridor" alongside some of the desert's most recognized lifestyle hotels.</p>
+    </div>
+    <div class="data-table-wrap reveal">
+      <div class="data-table-title"><div class="dot"></div>Palm Springs Lifestyle Hotels — Comp Set</div>
+      <table>
+        <thead><tr><th>Property</th><th>Keys</th><th>Suites</th><th>Acres</th><th>F&B</th><th>Spa</th><th>Opened</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The Tropics (Pro Forma)</strong></td><td>92</td><td>16 (17%)</td><td>2.97</td><td>3</td><td>Yes*</td><td>1964</td></tr>
+          <tr><td>Ace Hotel & Swim Club</td><td>179</td><td>11 (6%)</td><td>5.04</td><td>3</td><td>Yes</td><td>1966 / 2009</td></tr>
+          <tr><td>The Saguaro</td><td>244</td><td>14 (6%)</td><td>6.20</td><td>3</td><td>Yes</td><td>1977</td></tr>
+          <tr><td>Hotel Zoso</td><td>163</td><td>4 (2%)</td><td>3.50</td><td>5</td><td>Yes</td><td>1987</td></tr>
+          <tr><td>L'Horizon</td><td>25</td><td>25 (100%)</td><td>—</td><td>1</td><td>Yes</td><td>1952</td></tr>
+          <tr><td>Life House (fmr Royal Sun)</td><td>66</td><td>4 (6%)</td><td>—</td><td>2</td><td>No</td><td>1965</td></tr>
+        </tbody>
+      </table>
+      <div style="padding:12px 20px;font-size:12px;color:var(--text-muted);border-top:1px solid rgba(0,0,0,0.04);">
+        *Wellness center planned as part of renovation program. Ace Hotel acquired by JRK Property Holdings (Oct 2022) via $350M hospitality fund; sale price undisclosed (Hotel Online). Ace Hotel brand subsequently acquired by Seibu Prince Hotels Worldwide for $90M in Sept 2025 (Hotel Dive). Acreage: 5.04 acres per JRK press release.
+      </div>
+    </div>
+    <div class="data-table-wrap reveal" style="margin-top:20px;">
+      <div class="data-table-title"><div class="dot" style="background:var(--gold);"></div>Performance Benchmarking — BW Plus Las Brisas vs. The Tropics Pro Forma</div>
+      <table>
+        <thead><tr><th>Metric</th><th>Las Brisas (2024 TTM)</th><th>Tropics Y1</th><th>Tropics Y3</th><th>Tropics Y5</th></tr></thead>
+        <tbody>
+          <tr><td>Occupancy</td><td>83%</td><td>45%</td><td>60%</td><td>75%</td></tr>
+          <tr><td>ADR</td><td>$211</td><td>$153</td><td>$208</td><td>$224</td></tr>
+          <tr><td>RevPAR</td><td>$175</td><td>$69</td><td>$125</td><td>$168</td></tr>
+          <tr><td>GOP %</td><td>39% (EBITDA margin)</td><td>18.2%</td><td>29.9%</td><td>36.2%</td></tr>
+        </tbody>
+      </table>
+      <div style="padding:12px 20px;font-size:12px;color:var(--text-muted);border-top:1px solid rgba(0,0,0,0.04);">
+        Las Brisas Hotel Group's 90-room BW Plus in downtown Palm Springs is ranked 2nd of 163 best value hotels on TripAdvisor with 75% guest retention. This is the proven playbook for The Tropics turnaround.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== OPERATIONAL DNA =================== -->
+<!-- Commentary #20: Operational execution plan -->
+<section class="section" style="padding-top:60px;padding-bottom:60px;">
+  <div class="reveal">
+    <div class="section-label">The Operator</div>
+    <h2 class="section-heading">Operational <em>DNA</em></h2>
+    <p class="section-desc">Las Brisas Hotel Group is a family-owned hotel investment and management company based in Palm Springs with 50+ years of operating experience and a proven track record of revitalizing underperforming properties.</p>
+  </div>
+  <div class="three-col reveal">
+    <div class="metric-card">
+      <div class="metric-card-value" style="font-size:22px;">50+</div>
+      <div class="metric-card-label">Years Hotel Operating Experience</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;line-height:1.5;">Raymond Johnston: Chairman of Best Western Worldwide, President of Yellowstone NP, President of Campbell Soup's Restaurant Division.</p>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-value" style="font-size:22px;">$1.5B+</div>
+      <div class="metric-card-label">RE Transactions (Michelle Johnston)</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;line-height:1.5;">Former Starwood Hotels & Resorts ($1B global portfolio). Marriott International dispositions and JV management in Latin America.</p>
+    </div>
+    <div class="metric-card">
+      <div class="metric-card-value" style="font-size:22px;">39%</div>
+      <div class="metric-card-label">EBITDA Margin (Las Brisas Hotel)</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;line-height:1.5;">20-pt occupancy premium vs. comp set. 75% guest retention. Average employee tenure of 16 years. Developer of the Year — Starwood Hotels.</p>
+    </div>
+  </div>
+  <div class="data-table-wrap reveal" style="margin-top:32px;">
+    <div class="data-table-title"><div class="dot" style="background:var(--terracotta)"></div>LBHG Track Record</div>
+    <table>
+      <thead><tr><th>Property</th><th>Location</th><th>Keys</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Las Brisas Hotel</td><td>Palm Springs, CA</td><td>90</td><td style="font-family:Outfit;font-size:13px;">Acquired in receivership → top performing hotel (occ. 20pts above comp set)</td></tr>
+        <tr><td>Airport Marina Hotel</td><td>Los Angeles, CA</td><td>760</td><td style="font-family:Outfit;font-size:13px;">Negative cash flow → $3M+ profit within 18 months</td></tr>
+        <tr><td>Big Bear Chateau</td><td>Big Bear, CA</td><td>80</td><td style="font-family:Outfit;font-size:13px;">Repositioned distressed hotel → strong cash flow within 2 years</td></tr>
+        <tr><td>Hampton Inn Tucson</td><td>Tucson, AZ</td><td>126</td><td style="font-family:Outfit;font-size:13px;">Increased NOI 50% within first year; sustained strong market position</td></tr>
+        <tr><td>Four Points Tucson</td><td>Tucson, AZ</td><td>150</td><td style="font-family:Outfit;font-size:13px;">Invested $3M to reposition closed & deflagged hotel → sold at strong value</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- =================== CTA / NEXT STEPS =================== -->
+<section class="cta-section">
+  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://calientetropics.com/wp-content/uploads/caliente-home-3-1-1024x680.jpg') center center / cover no-repeat;opacity:0.1;filter:saturate(0.5);"></div>
+  <div style="position:relative;z-index:2;">
+    <h2 class="cta-heading reveal">The model is <em>investor-ready.</em></h2>
+    <p class="cta-sub reveal">Aligned on structure, strategy, and execution. Ready for LP outreach.</p>
+    <div class="cta-steps reveal">
+      <div class="cta-step">
+        <div class="cta-step-num">01</div>
+        <h4>Review & Align</h4>
+        <p>Review deck + model this week. Confirm independent positioning, renovation scope, and investor outreach timeline.</p>
+      </div>
+      <div class="cta-step">
+        <div class="cta-step-num">02</div>
+        <h4>Confirm Key Items</h4>
+        <p>BIA lease terms and timeline. CapEx scope at $3.75M. Distribution platform memberships (Design Hotels, Mr &amp; Mrs Smith).</p>
+      </div>
+      <div class="cta-step">
+        <div class="cta-step-num">03</div>
+        <h4>Launch LP Outreach</h4>
+        <p>Finalize investor presentation and data room. Begin outreach with 70/30 structure, 8% current-pay pref, and $4M investor equity ticket.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADDENDUM: BIA LEASE PATH + DEAL DEEP DIVE =================== -->
+<section class="section section-dark" style="padding-top:80px;">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label light">Addendum A</div>
+      <h2 class="section-heading">Path to the <em>99-year lease</em></h2>
+      <p class="section-desc">A step-by-step guide to securing long-term lease security on Agua Caliente tribal trust land — the structural foundation of this transaction.</p>
+    </div>
+
+    <!-- RECOMMENDED PATH -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:24px;color:var(--gold);">Recommended Path (Summary)</h3>
+      <div style="display:grid;grid-template-columns:40px 1fr;gap:16px 20px;font-size:14px;line-height:1.7;">
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">01</div>
+        <div>Obtain a Title Status Report (TSR) from BIA Palm Springs Agency to confirm land status (tribal trust vs. allotted trust), identify the landowner(s), and surface any encumbrances or title defects.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">02</div>
+        <div>Determine governing framework: whether the Agua Caliente has approved HEARTH Act regulations for commercial leasing or if the standard BIA 25 CFR Part 162 (Subpart D — Business Leases) approval path applies.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">03</div>
+        <div>Engage tribal realty office (Agua Caliente Trust Services) and BIA Palm Springs Agency early — request a Preliminary Review of proposed lease terms under §162.440 before formal submission.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">04</div>
+        <div>Negotiate new 99-year lease terms with the individual allottee landowner or tribal authority. This is a new lease (not an extension) — the cleanest path. The existing ~27-year lease has already been extended once and may not be eligible for further extension.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">05</div>
+        <div>Secure Indian landowner consent and tribal authorization (if tribal land). Prepare the full lease package per 25 CFR §162.438: executed lease, valuation/appraisal, NEPA documentation, entity documentation, insurance, performance bond, and environmental/archaeological assessments.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">06</div>
+        <div>BIA reviews the complete package within 30 days of receipt for business leases (§162.440). If approved, the lease is recorded at the Land Title and Records Office (LTRO). If incomplete, BIA notifies parties of missing items.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">07</div>
+        <div>Assignment strategy: recommend the seller (Harry) execute a concurrent assignment of the existing leasehold to our GP entity, while our GP entity simultaneously applies as the new leaseholder for the 99-year term. This avoids a gap in operational control.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">08</div>
+        <div>NEPA compliance: initiate environmental assessment early (Month 1–2). BIA may adopt an existing EA/EIS under 43 CFR 46.320 if prior environmental work has been completed on the parcel. Hotel use is a continuation of existing use, which simplifies NEPA.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">09</div>
+        <div>Valuation: BIA requires fair market rent determination. Engage an MAI appraiser with BIA trust land experience. Current ground lease terms (5% room revenue + 1.5% other revenue) should be validated against comparable leases in the Agua Caliente portfolio.</div>
+        <div style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;text-align:right;">10</div>
+        <div>Lender coordination: SBA/conventional lenders require an executed, recorded lease with a remaining term exceeding the loan term by a meaningful margin. A 99-year lease satisfies all institutional lending requirements. Target: BIA approval and LTRO recording before refi application (2029).</div>
+      </div>
+    </div>
+
+    <!-- WHEN TO START — THE KEY QUESTION -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:12px;color:var(--white);">When do we start the 99-year lease process?</h3>
+      <div class="divider" style="background:linear-gradient(90deg,var(--gold),var(--teal-light));margin-bottom:24px;"></div>
+
+      <!-- IMPORTANT STRUCTURAL CONTEXT -->
+      <div style="background:rgba(201,169,97,0.08);border:1px solid rgba(201,169,97,0.2);border-radius:16px;padding:28px;margin-bottom:28px;">
+        <h4 style="font-size:15px;color:var(--gold-light);margin-bottom:12px;">Understanding the Deal Structure</h4>
+        <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.8;">This is a <strong style="color:var(--white);">building lease with purchase option</strong> — not a straight purchase. Harry remains the ground leaseholder and the borrower of record on the existing bank loan. LBHG takes operational control via an Interim Management Agreement (IMA) that converts into a building lease once Stage A approvals are obtained. During the building lease phase (3 years + 1-year extension), LBHG operates the hotel, services Harry's debt, pays ground rent, and executes the $3.75M renovation.</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.8;margin-top:12px;">The <strong style="color:var(--white);">purchase option is exercised</strong> when LBHG is ready to take title — which requires the 99-year ground lease to be in place and financing (SBA refi) to be arranged. Harry receives <strong style="color:var(--gold-light);">$1M upfront at lease commencement</strong> (credited against the $8M purchase price), and the remaining $7M when the purchase option is exercised. <strong style="color:var(--gold-light);">No interest accrues on the $7M balance during the building lease — which is the core economic advantage of this structure.</strong></p>
+      </div>
+
+      <!-- THE SEQUENCING QUESTION -->
+      <div style="background:linear-gradient(135deg, rgba(42,125,128,0.15), rgba(201,169,97,0.1));border:2px solid rgba(201,169,97,0.3);border-radius:20px;padding:40px;">
+        <h4 style="font-size:18px;color:var(--gold-light);margin-bottom:16px;letter-spacing:0.03em;">Can we get the 99-year lease before we own the hotel?</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:20px;">Not directly. Under 25 CFR Part 162, the applicant for a new ground lease must have a legitimate basis to be the leaseholder. Since Harry holds the existing ground lease and you're operating under a building lease, the BIA would need to see either: (a) a simultaneous assignment of the existing leasehold to your entity plus application for a new 99-year term, or (b) Harry cooperating as the existing leaseholder to facilitate a new lease in your name. Either way, this is most cleanly done in conjunction with the purchase option exercise — not as a standalone action during the building lease period.</p>
+
+        <h4 style="font-size:18px;color:var(--gold-light);margin-bottom:16px;margin-top:28px;letter-spacing:0.03em;">RECOMMENDATION: Two-Phase Approach</h4>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+          <div style="background:rgba(42,125,128,0.12);border-radius:16px;padding:24px;border:1px solid rgba(42,125,128,0.3);">
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--teal-light);margin-bottom:10px;font-weight:600;">Phase 1: Groundwork (Years 1–2)</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.7;">
+              <p style="margin-bottom:8px;">During the building lease period, you <strong style="color:var(--white);">can and should</strong> do the preparatory work:</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Get the TSR from BIA (understand exactly what you're dealing with)</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Identify the landowner and build the relationship</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Commission the environmental assessment (NEPA)</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Get the MAI appraisal for rent reasonableness</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Pre-negotiate lease terms with the landowner</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Request a BIA Preliminary Review of proposed terms</p>
+              <p style="margin-top:10px;">None of this requires you to hold the ground lease. This is intelligence gathering and relationship building that dramatically de-risks the formal application later.</p>
+            </div>
+          </div>
+          <div style="background:rgba(201,169,97,0.08);border-radius:16px;padding:24px;border:1px solid rgba(201,169,97,0.2);">
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:10px;font-weight:600;">Phase 2: Formal Application (Year 3)</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.7;">
+              <p style="margin-bottom:8px;">Begin the formal 99-year lease application <strong style="color:var(--white);">~12 months before your target refi date</strong>:</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Exercise the purchase option (or apply concurrently)</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Harry assigns existing ground lease to your entity</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Submit full lease package to BIA (all prep work done in Phase 1)</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— BIA approves within 30 days (complete business lease package)</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— LTRO records the new 99-year lease</p>
+              <p style="margin-bottom:6px;padding-left:12px;">— Apply for SBA/conventional refi with recorded lease in hand</p>
+              <p style="margin-top:10px;">Because all the groundwork is done, the formal application should take 3–4 months, not 9–12. You've already done the hard work.</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;"><strong style="color:var(--gold-light);">Why this works:</strong> Harry gets $1M cash upfront, then you operate under the building lease for 3 years with zero interest on the remaining $7M — that's the golden window. You renovate, stabilize NOI, prove the numbers. In Year 3, you exercise the purchase option, simultaneously close on the 99-year lease (which you've been pre-cooking since Year 1), and immediately apply for the SBA refi. The refi proceeds pay Harry his remaining $7M. The 99-year lease is recorded. Everyone is made whole.</p>
+      </div>
+    </div>
+
+    <!-- MASTER TIMELINE — CORRECTED FOR BUILDING LEASE STRUCTURE -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:24px;color:var(--gold);">Master Timeline: Building Lease → Purchase → 99-Year Lease → Refi</h3>
+    </div>
+    <div class="reveal" style="margin-bottom:48px;">
+      <div style="display:grid;grid-template-columns:1fr;gap:2px;border-radius:16px;overflow:hidden;">
+
+        <div style="background:rgba(42,125,128,0.12);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">Mid-2026</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Stage A</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">IMA goes live → Operational control</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Stage A approvals obtained. LBHG takes over day-to-day operations under IMA. Harry receives $1M upfront (credited against $8M purchase price). Harry stays on as ground leaseholder and borrower of record. LBHG services the debt and pays ground rent. Zero interest on the remaining $7M. Begin planning renovation.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--teal-light);font-weight:600;margin-bottom:4px;">LEASE PREP: Start TSR + landowner ID</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">Owner: GP Counsel</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">Late 2026</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Year 1 Ops</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">Operate + Begin lease groundwork</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Run hotel operations. Install new PMS/tech. Light refresh. Simultaneously: order TSR from BIA, identify landowner, commission NEPA environmental assessment, engage tribal realty for preliminary discussions. This is intelligence gathering — no formal application yet.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--teal-light);font-weight:600;margin-bottom:4px;">LEASE PREP: NEPA + Appraisal</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">Owner: GP Counsel + Env. Consultant</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">Summer 2027</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Renovation</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">Major renovation ($4M) + Pre-negotiate lease terms</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Execute phased renovation — guestrooms, public areas, F&B, pool. Simultaneously: pre-negotiate 99-year lease terms with landowner. Request BIA Preliminary Review of proposed terms. Get the MAI appraisal done. By end of 2027, all lease prep work should be complete and in the file, ready to submit.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--teal-light);font-weight:600;margin-bottom:4px;">LEASE PREP: Terms negotiated</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">Owner: GP + Project Manager</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">2028</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Year 3 — Brand + Stabilize</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">Brand launch + Build stabilized NOI track record</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">Design Hotels flag goes live. Occupancy ramps to 60%. ADR jumps to $208. Begin building the 12-month trailing NOI that lenders will require. F&B activation generates high-margin revenue. All lease prep documents are in the file and ready.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--gold);font-weight:600;margin-bottom:4px;">LEASE PREP: ✓ File ready</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">Owner: GP Operations</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(42,125,128,0.12);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">Early 2029</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Exercise + Apply</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">Exercise purchase option + Submit 99-year lease to BIA</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">12 months of stabilized NOI in hand. Exercise the purchase option under the building lease. Harry assigns existing ground lease to LBHG. Simultaneously submit the pre-prepared 99-year lease package to BIA. Because all prep work is done, approval should take 2–4 months (not 9–12). This is why the Phase 1 groundwork matters.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--teal-light);font-weight:600;margin-bottom:4px;">LEASE: Formal submission</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">Owner: GP Counsel + BIA</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(201,169,97,0.1);padding:20px 28px;display:grid;grid-template-columns:140px 1fr 220px;gap:20px;align-items:start;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--gold-light);">Mid-2029</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.06em;">Close + Refi</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;">99-year lease approved → Close purchase → SBA refi</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">BIA approves and records the 99-year lease at LTRO. Purchase closes — Harry receives his $8M. Apply for SBA refi with: recorded 99-year lease, 12+ months stabilized NOI, third-party appraisal, franchise agreement. Refi proceeds fund the purchase. Seller note retired. Investor capital returned. Everyone is made whole.</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--gold);font-weight:600;margin-bottom:4px;">LEASE: ✓ Approved + Recorded</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);">REFI TARGET ⟶</div>
+          </div>
+        </div>
+
+      </div>
+      <div style="padding:20px;font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-top:8px;">
+        <strong style="color:var(--gold-light);">Key insight:</strong> Harry gets $1M upfront, then the 3-year building lease at zero interest on the remaining $7M is the golden window. You use it to renovate, stabilize, and pre-cook the 99-year lease. By the time you exercise the purchase option, the BIA file is ready to submit — turning what would be a 9–12 month process into a 2–4 month formality. The refi and purchase close together, funded by the same SBA loan. Harry receives his remaining $7M.
+      </div>
+    </div>
+
+    <!-- EXTENSION vs NEW LEASE -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:24px;color:var(--gold);">Extension vs. New Lease</h3>
+      <div class="two-col" style="gap:24px;">
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px;">
+          <h4 style="margin-bottom:12px;font-size:16px;">Option A: Extend Existing Lease</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;">Per 25 CFR §162, leases may be extended such that the total term does not exceed 99 years. However, the existing lease has already been extended once — and per the call transcript (Jan 2026), further extension is not possible through the standard path. The BIA contact confirmed that a new lease would be required to reach 99 years.</p>
+          <div style="margin-top:12px;padding:8px 16px;background:rgba(194,113,79,0.15);border-radius:8px;font-size:12px;color:var(--terracotta);">⚠ Not recommended — prior extension exhausted</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,97,0.2);border-radius:16px;padding:28px;">
+          <h4 style="margin-bottom:12px;font-size:16px;">Option B: New 99-Year Lease (Recommended)</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;">Negotiate a new ground lease for up to 99 years directly with the Indian landowner, with BIA approval. This is the cleanest path: it produces a fresh lease that satisfies all institutional lending requirements, eliminates leasehold discount on exit valuation, and provides maximum term security for investors.</p>
+          <div style="margin-top:12px;padding:8px 16px;background:rgba(42,125,128,0.2);border-radius:8px;font-size:12px;color:var(--teal-light);">✓ Recommended — maximum financeability</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ACQUISITION STRATEGY: PLAN A vs PLAN B ============ -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:12px;color:var(--white);">Two paths to ownership</h3>
+      <div class="divider" style="background:linear-gradient(90deg,var(--gold),var(--teal-light));margin-bottom:24px;"></div>
+      <p style="font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px;">The building lease structure gives us a choice: take our time and save on interest, or move fast and own the asset outright. Both are viable. The right answer depends on your risk appetite, investor profile, and how quickly the BIA process can move.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+
+        <!-- PLAN A: BUILDING LEASE (3-YEAR) -->
+        <div style="background:rgba(42,125,128,0.1);border:2px solid rgba(42,125,128,0.3);border-radius:20px;padding:32px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal-light);margin-bottom:12px;font-weight:600;">Acquisition Plan A — Building Lease (3 Years)</div>
+          <h4 style="font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;">Operate first. Buy later.</h4>
+
+          <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:20px;">
+            <p style="margin-bottom:10px;">Take operational control in 2026 via IMA / building lease. Harry receives $1M upfront at lease commencement (credited against the $8M purchase price). Harry stays as ground leaseholder and borrower. No interest on the remaining $7M — base rent covers only his existing debt service. Renovate, stabilize NOI, prove the numbers over 3 years. Exercise purchase option in 2029, pay remaining $7M from SBA refi proceeds.</p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;margin-bottom:16px;">
+            <div style="font-size:12px;color:var(--teal-light);font-weight:600;margin-bottom:8px;">FINANCIAL BENEFIT</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+              <p style="margin-bottom:6px;"><strong style="color:var(--white);">~$840K saved in interest</strong> — $7M deferred balance at 0% interest over 3 years saves ~$280K/yr vs. market rate (8%). Harry gets $1M upfront at commencement, so he's not waiting empty-handed.</p>
+              <p style="margin-bottom:6px;"><strong style="color:var(--white);">Lower risk during renovation</strong> — you don't own the asset during the J-curve. If something goes wrong, your exposure is limited to operating losses + invested capex, not the full $8M purchase.</p>
+              <p><strong style="color:var(--white);">More time to prove NOI</strong> — 3 years of operating history gives lenders maximum confidence at refi. Stronger appraisal = more proceeds = better terms.</p>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;margin-bottom:16px;">
+            <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:8px;">TIMELINE</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">
+              2026: IMA → operational control → begin lease groundwork<br>
+              2027: Renovation → pre-negotiate 99-yr lease terms<br>
+              2028: Stabilize NOI → brand launch → 12-month track record<br>
+              2029: Exercise option → 99-yr lease → SBA refi → close purchase
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;">
+            <div style="font-size:12px;color:var(--terracotta);font-weight:600;margin-bottom:8px;">RISKS</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">
+              Harry relationship — he carries for 3+ years; needs to stay aligned<br>
+              Interest rate risk — rates could rise by 2029 refi<br>
+              You don't own the asset — limited control over ground lease negotiations<br>
+              BIA timing — if 99-yr lease delays, the refi and purchase slip
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAN B: ACCELERATED PURCHASE (~1 YEAR) -->
+        <div style="background:rgba(201,169,97,0.08);border:2px solid rgba(201,169,97,0.3);border-radius:20px;padding:32px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:12px;font-weight:600;">Acquisition Plan B — Accelerated (12 Months)</div>
+          <h4 style="font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;">Buy fast. Own everything.</h4>
+
+          <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:20px;">
+            <p style="margin-bottom:10px;">Run 90-day due diligence while simultaneously pursuing the 99-year lease with BIA. Target: close on the purchase + 99-year lease within 9–12 months. Get the SBA loan approved with the recorded 99-year lease. You own the hotel, the lease, and the debt from Day 1. No building lease middleman structure.</p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;margin-bottom:16px;">
+            <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:8px;">FINANCIAL BENEFIT</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+              <p style="margin-bottom:6px;"><strong style="color:var(--white);">Immediate equity creation</strong> — $8M purchase price. Once the 99-year lease is recorded and renovation begins, the appraised value jumps significantly. You capture the spread between cost basis and market value from Day 1.</p>
+              <p style="margin-bottom:6px;"><strong style="color:var(--white);">99-year lease = institutional asset</strong> — a recorded 99-year BIA lease eliminates the leasehold discount entirely. Comparable hotels trade at substantially higher valuations. Your cost basis has immediate mark-to-market upside.</p>
+              <p><strong style="color:var(--white);">SBA lock-in at today's rates</strong> — if rates drop further (forward curve ~3.2% by 2028), locking an SBA loan now could be advantageous vs. waiting 3 years when rates may be higher.</p>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;margin-bottom:16px;">
+            <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:8px;">TIMELINE</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">
+              M0: Execute LOI → begin DD + BIA engagement simultaneously<br>
+              M1–3: Due diligence + TSR + NEPA + landowner negotiations<br>
+              M3–6: Assemble full BIA lease package + SBA application<br>
+              M6–9: BIA approval + LTRO recording<br>
+              M9–12: SBA closes → purchase closes → you own everything
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;">
+            <div style="font-size:12px;color:var(--terracotta);font-weight:600;margin-bottom:8px;">RISKS</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;">
+              BIA timing — process may not fit in 9–12 months<br>
+              SBA underwriting — no stabilized NOI track record yet; lender may want projections<br>
+              Higher debt service from Day 1 — carrying SBA loan during renovation J-curve<br>
+              Harry must agree — different deal structure than what's been discussed
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.08);">
+        <h4 style="font-size:16px;color:var(--white);margin-bottom:16px;">Head-to-Head Comparison</h4>
+        <div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:0;font-size:13px;">
+          <div style="padding:10px 16px;font-weight:600;color:rgba(255,255,255,0.4);border-bottom:1px solid rgba(255,255,255,0.08);"></div>
+          <div style="padding:10px 16px;font-weight:600;color:var(--teal-light);border-bottom:1px solid rgba(255,255,255,0.08);">Plan A: Building Lease (3yr)</div>
+          <div style="padding:10px 16px;font-weight:600;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.08);">Plan B: Accelerated (12mo)</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Interest cost to Harry</div>
+          <div style="padding:10px 16px;color:var(--teal-light);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">$0 on $7M deferred (Harry gets $1M upfront)</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">N/A — paid at close via SBA</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Interest savings vs. market</div>
+          <div style="padding:10px 16px;color:var(--teal-light);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">~$840K saved (8% on $7M × 3yr)</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">N/A — SBA debt service from Day 1</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Time to ownership</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">~3 years (2029)</div>
+          <div style="padding:10px 16px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">~12 months (2027)</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">99-year lease timing</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Year 3 (with purchase option)</div>
+          <div style="padding:10px 16px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">Year 1 (pre-close condition)</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Investor pitch</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">"Low-risk turnaround with zero-interest carry"</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">"Own a $21M+ asset at a deep discount with 99-yr lease"</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Lender confidence</div>
+          <div style="padding:10px 16px;color:var(--teal-light);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">High — 12+ months proven NOI at refi</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Moderate — projections only; no track record</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Renovation risk</div>
+          <div style="padding:10px 16px;color:var(--teal-light);border-bottom:1px solid rgba(255,255,255,0.04);font-weight:600;">Lower — you don't own during J-curve</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.04);">Higher — carrying full debt during reno</div>
+
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);">Best for</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);">Risk-averse investors; maximize NOI proof</div>
+          <div style="padding:10px 16px;color:rgba(255,255,255,0.5);">Equity upside hunters; rate-lock opportunists</div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding:20px;background:rgba(201,169,97,0.06);border:1px solid rgba(201,169,97,0.15);border-radius:12px;">
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;"><strong style="color:var(--gold-light);">Our recommendation:</strong> Lead with Plan A (building lease) as the primary strategy — Harry gets $1M upfront, the zero-interest carry on the $7M balance saves ~$840K, it de-risks the renovation period, and gives you time to build a bulletproof NOI track record. But keep Plan B in your back pocket: if the BIA process moves faster than expected, or if Harry signals willingness to do a clean sale, you can pivot to the accelerated path and capture the equity creation sooner. The LOI should be structured to preserve both options.</p>
+      </div>
+    </div>
+
+    <!-- RISK REGISTER — CARD LAYOUT -->
+    <div class="reveal" style="margin-bottom:48px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:24px;color:var(--gold);">Risk Register — Top 10</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--terracotta);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">1. BIA approval takes >12 months</span><span style="font-size:11px;color:var(--terracotta);">Med / High</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Preliminary Review at M1; engage BIA liaison early; build 12-month buffer. Owner: GP Counsel</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--terracotta);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">2. Landowner won't consent to new terms</span><span style="font-size:11px;color:var(--terracotta);">Low-Med / High</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Engage landowner early; competitive rent; tribal liaison advocacy. Owner: GP + Broker</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--gold);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">3. NEPA triggers full EIS</span><span style="font-size:11px;color:var(--gold);">Low / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Existing hotel = continuation of use; prior EA adoptable (43 CFR 46.320). Owner: Env. Consultant</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--gold);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">4. Seller financing terms unresolved</span><span style="font-size:11px;color:var(--gold);">Med / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Harry not in urgent need of capital; incentivize with upside participation. Owner: GP</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--gold);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">5. Renovation costs exceed $4M</span><span style="font-size:11px;color:var(--gold);">Med / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: 10% contingency; phased draw; competitive bidding. Owner: GP / PM</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--gold);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">6. Y1–Y2 shortfall exceeds reserves</span><span style="font-size:11px;color:var(--gold);">Med / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Conservative occupancy (45–50%); $592K reserves; staged capex. Owner: GP / CFO</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid rgba(255,255,255,0.2);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">7. Distribution platforms not secured</span><span style="font-size:11px;color:rgba(255,255,255,0.4);">Low / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Multiple platforms available (Design Hotels, Tablet, Mr &amp; Mrs Smith); not dependent on any single one. Owner: GP</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid var(--gold);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">8. Interest rates higher at refi</span><span style="font-size:11px;color:var(--gold);">Med / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Model uses 5.75% (conservative vs forward curve); scenario analysis provided. Owner: GP / CFO</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid rgba(255,255,255,0.2);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">9. Palm Springs market downturn</span><span style="font-size:11px;color:rgba(255,255,255,0.4);">Low / Med</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: Strict zoning limits supply; 14.4M visitors/yr; diversified demand. Owner: Market</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:20px;border-left:3px solid rgba(255,255,255,0.2);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span style="font-size:13px;font-weight:600;color:var(--white);">10. Ground lease rent reset</span><span style="font-size:11px;color:rgba(255,255,255,0.4);">Low / Low</span></div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;">Mitigation: New 99-yr lease sets terms for full duration; negotiate fixed escalators. Owner: GP Counsel</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADDENDUM B: REFINANCE SCENARIO ANALYSIS =================== -->
+<section class="section section-sand" style="padding-top:60px;">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Addendum B</div>
+      <h2 class="section-heading">Refinance <em>scenario analysis</em></h2>
+      <p class="section-desc">Three rate scenarios for the 2029–2030 refinance window, using current market data and forward curve pricing. All scenarios assume 65% LTV and 9.0% cap rate on stabilized NOI.</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:24px;">
+      <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:16px;"><strong>Market context (March 2026):</strong> Fed funds effective rate is 3.64%. Futures markets price a glide to ~3.2% by early 2028, firming to ~3.4% by 2030 (StreetStats / CME Fed Funds Futures, March 2026). FOMC Dec 2025 dot plot median for end-2027: 3.4%, with a range of 2.4–3.9% (FRED / St. Louis Fed). Conventional hotel lending spreads typically run 200–300bps over the risk-free rate for stabilized assets with strong lease security.</p>
+    </div>
+
+    <div class="proforma-scroll reveal">
+      <div class="data-table-wrap">
+        <div class="data-table-title"><div class="dot" style="background:var(--teal)"></div>Refinance Scenario Analysis — Year 4 (2029)</div>
+        <table>
+          <thead><tr><th>Metric</th><th style="color:var(--green);">Scenario A: Lower</th><th>Scenario B: Base</th><th style="color:var(--terracotta);">Scenario C: Higher</th></tr></thead>
+          <tbody>
+            <tr><td>Fed Funds Rate (2029)</td><td>2.75–3.00%</td><td>3.25–3.50%</td><td>4.00–4.50%</td></tr>
+            <tr><td>Refi Rate (hotel debt)</td><td>5.00%</td><td>5.75%</td><td>6.75%</td></tr>
+            <tr><td>Y4 NOI (Branded)</td><td>$1,469K</td><td>$1,469K</td><td>$1,469K</td></tr>
+            <tr><td>Cap Rate</td><td>8.50%</td><td>9.00%</td><td>9.50%</td></tr>
+            <tr><td>Property Value</td><td>$17,282K</td><td>$16,322K</td><td>$15,463K</td></tr>
+            <tr><td>Refi Loan (65% LTV)</td><td>$11,234K</td><td>$10,609K</td><td>$10,051K</td></tr>
+            <tr><td>Payoff Existing Debt</td><td>$7,875K</td><td>$7,875K</td><td>$7,875K</td></tr>
+            <tr><td>Net Refi Proceeds (after 1% fee)</td><td class="hl">$3,186K</td><td>$2,571K</td><td class="neg">$2,021K</td></tr>
+            <tr><td>Annual DS (Post-Refi)</td><td>$720K</td><td>$801K</td><td>$894K</td></tr>
+            <tr><td>DSCR (Y5 NOI $1,777K)</td><td class="hl">2.47x</td><td>2.22x</td><td class="neg">1.99x</td></tr>
+            <tr><td>Spread to Risk-Free</td><td>+225bps</td><td>+250bps</td><td>+275bps</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:16px 20px;font-size:12px;color:var(--text-muted);border-top:1px solid rgba(0,0,0,0.04);">
+          All scenarios maintain positive DSCR above 1.25x institutional threshold. Base case uses 5.75% refi rate — conservative relative to the forward curve (which implies fed funds ~3.2–3.4% in 2029, suggesting hotel rates of 5.2–5.7%). Higher scenario stress-tests a return to 2024-era rates. Sources: StreetStats.finance (March 2026 futures); FRED/St. Louis Fed (FOMC Dec 2025 SEP); CME FedWatch.
+        </div>
+      </div>
+    </div>
+
+    <!-- REFI PREREQUISITES -->
+    <div class="two-col reveal" style="margin-top:32px;gap:24px;">
+      <div class="flag-box">
+        <h4>Refi Prerequisites</h4>
+        <p><strong>1.</strong> 99-year BIA lease executed and recorded at LTRO — non-negotiable for institutional lending.<br>
+        <strong>2.</strong> Stabilized NOI (12+ months trailing) — lenders require proven operating history, not projections.<br>
+        <strong>3.</strong> Third-party MAI appraisal supporting valuation.<br>
+        <strong>4.</strong> Clean title and no material encumbrances.<br>
+        <strong>5.</strong> Franchise agreement in place (Plan A) or strong independent track record (Plan B).</p>
+      </div>
+      <div class="flag-box">
+        <h4>Refi Timing — Best / Base / Worst</h4>
+        <p><strong>Best case (Y3.5, mid-2029):</strong> BIA lease approved by end of 2027; renovation complete mid-2028; 12 months stabilized NOI by early 2029. Refi closes mid-2029.<br>
+        <strong>Base case (Y4, early 2030):</strong> BIA takes 12 months; renovation extends into 2028; stabilization proven by mid-2029. Refi closes early 2030.<br>
+        <strong>Worst case (Y5, 2031):</strong> BIA delays + renovation delays + slow occupancy ramp pushes stabilized NOI to late 2029. Refi closes 2031.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADDENDUM C: DECK REVIEW — QUESTIONS + THOUGHT STARTERS =================== -->
+<section class="section" style="padding-top:60px;">
+  <div class="reveal">
+    <div class="section-label">Addendum C</div>
+    <h2 class="section-heading">Due diligence questions & <em>thought starters</em></h2>
+    <p class="section-desc">Anticipated investor, lender, and tribal/BIA questions — plus strategic ideas to accelerate hotel performance and tighten the narrative.</p>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div class="reveal" style="margin-bottom:40px;">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;margin-bottom:20px;">Questions to Be Ready For</h3>
+    <div class="three-col" style="gap:20px;">
+      <div style="background:var(--white);border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,0.06);">
+        <h4 style="font-size:14px;color:var(--teal);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.08em;">Investor Questions</h4>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.8;">
+          <p>Why does the GP get 30% ownership on 11.1% of the equity?</p>
+          <p>What happens if the BIA lease is not approved — is there a downside protection or exit mechanism?</p>
+          <p>What are the seller financing terms (rate, maturity, prepayment) and what happens if Harry accelerates the note?</p>
+          <p>How is the $592K operating reserve calculated and is it sufficient to cover Y1–Y2 shortfall (~$900K cumulative)?</p>
+          <p>What is the GP's track record with renovation projects of this scale and scope?</p>
+          <p>What are the specific franchise terms being negotiated with Design Hotels?</p>
+          <p>If the independent scenario produces higher returns, why pursue the brand at all?</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,0.06);">
+        <h4 style="font-size:14px;color:var(--teal);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.08em;">Lender Questions</h4>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.8;">
+          <p>Is the 99-year lease executed and recorded, or is it pending BIA approval?</p>
+          <p>What is the ground lease rent escalation mechanism?</p>
+          <p>What is the trailing 12-month NOI at the time of refi application?</p>
+          <p>Is the franchise agreement executed, and what are the PIP obligations?</p>
+          <p>What is the condition assessment and remaining useful life of major building systems (HVAC, roof, plumbing)?</p>
+          <p>Is there a Phase I/II environmental report?</p>
+          <p>What is the leasehold mortgage structure and does the landowner/BIA consent to the lender's lien?</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,0.06);">
+        <h4 style="font-size:14px;color:var(--teal);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.08em;">Tribal / BIA Questions</h4>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.8;">
+          <p>Is this allotted trust land (individual landowner) or tribal trust land?</p>
+          <p>Has the Agua Caliente adopted HEARTH Act regulations for commercial leases?</p>
+          <p>What is the current rent appraisal/valuation, and is a new appraisal required for the 99-year lease?</p>
+          <p>Is there an existing EA/EIS that can be adopted, or is a new NEPA review required?</p>
+          <p>Are there any pending title disputes, undivided interests, or fractionation issues?</p>
+          <p>What consents are needed: landowner, tribal council, BIA Superintendent?</p>
+          <p>What is the LTRO recording timeline after BIA approval?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THOUGHT STARTERS -->
+  <div class="reveal" style="margin-bottom:40px;">
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;margin-bottom:20px;">Strategic Thought Starters</h3>
+    <div class="why-now-grid" style="grid-template-columns:repeat(2,1fr);gap:16px;">
+      <div class="why-now-item">
+        <div class="why-now-num">STRUCTURE</div>
+        <h4>Operating Reserve Gap</h4>
+        <p>Y1–Y2 cumulative cash shortfall is ~$900K but reserves are $592K. Consider: (a) sizing reserves to $1M, (b) a GP-funded bridge facility, or (c) structuring the capex draw so that the bulk of renovation spend occurs in Y2 (post peak-season Y1 revenue).</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">STRUCTURE</div>
+        <h4>Seller Note Terms</h4>
+        <p>Harry receives $1M upfront + $3M at refi. Clarify: interest rate on the $3M note, maturity/call protection, and whether Harry participates in upside. An upside kicker incentivizes Harry to wait longer — which aligns his incentives with the stabilization timeline.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">REVENUE</div>
+        <h4>F&B as Profit Center</h4>
+        <p>Current model has F&B at ~32% of revenue with 70–80% cost. Target: F&B at 38–42% of revenue with 60–65% cost (achievable with Polynesian BBQ + craft cocktail program). F&B margin improvement of 10pts on $2.5M = $250K annual NOI uplift = ~$2.8M exit value at 9% cap.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">REVENUE</div>
+        <h4>Pool Day Pass + Events Revenue</h4>
+        <p>The 100K-gallon pool is the property's social engine. Model day pass revenue ($25–50/person, 30–50 passes/day peak season) and private event rentals (pool buyouts, corporate retreats, Tiki Oasis-style festivals). This could add $200–400K annually in high-margin revenue not currently modeled.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">REVENUE</div>
+        <h4>Channel Mix Optimization</h4>
+        <p>Target 40%+ direct bookings by Y3 (industry avg for lifestyle independents: 35–45%). Direct saves 15–25% vs. OTA commissions. On $5M room revenue, shifting 10% from OTA to direct = $75–125K annual savings. Invest in direct booking engine, CRM, and retargeting.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">OPERATIONS</div>
+        <h4>GOP Margin Target</h4>
+        <p>Model shows GOP at 36.2% by Y5. Las Brisas achieves 39%. Target 40%+ by focusing on: (a) housekeeping productivity ($80K savings from room attendant POR parity with Las Brisas), (b) Starlink telecom ($50K savings), (c) in-house laundry vs. outsource analysis.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">NARRATIVE</div>
+        <h4>Comp Set Pricing Power</h4>
+        <p>The deck shows The Tropics at $143K/key all-in. Add context: what do comparable lifestyle hotels trade at today? If Ace was rumored at $275–325K/key, and Saguaro/Zoso traded in the $200K+ range, the gap validates the entry point. Get actual comps from Marcus & Millichap.</p>
+      </div>
+      <div class="why-now-item">
+        <div class="why-now-num">NARRATIVE</div>
+        <h4>"Escape the Everyday" Positioning</h4>
+        <p>The Tropics 3_3 deck's "Palm Springs' Most Fun Hotel" positioning is strong. The investor deck could benefit from leaning into this experiential narrative more — not just financial metrics. Consider a dedicated "Guest Experience" slide with programming calendar, signature moments, and brand identity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SOURCES =================== -->
+<section class="section" style="padding-top:40px;padding-bottom:40px;">
+  <div class="reveal">
+    <div class="section-label">Sources & References</div>
+    <h2 class="section-heading" style="font-size:28px;">Data <em>verification</em></h2>
+    <div style="font-size:13px;line-height:1.8;color:var(--text-muted);max-width:900px;column-count:2;column-gap:40px;">
+      <p style="margin-bottom:12px;"><strong>Marriott Bonvoy membership:</strong> 271M members as of Q4 2025; member stays = 75% of U.S./Canada room nights. Source: Marriott International Q4 2025 Earnings Release (SEC filing, Feb 2026); Hotel Dive, Feb 2026.</p>
+      <p style="margin-bottom:12px;"><strong>Palm Springs visitor statistics:</strong> 14.4M visitors in 2023; $7.4B visitor spending; $9.0B total economic impact; 1-in-4 jobs tourism-supported. Source: Tourism Economics / Visit Greater Palm Springs 2023 Economic Impact Report.</p>
+      <p style="margin-bottom:12px;"><strong>Ace Hotel acquisition:</strong> 179-room property acquired by JRK Property Holdings from GFI Capital in October 2022 via $350M Hospitality Fund. Sale price undisclosed. 5.04-acre campus, 7 buildings. Source: Hotel-Online, Oct 20, 2022; Bisnow LA Deal Sheet, Oct 2022; Connect CRE, Oct 2022.</p>
+      <p style="margin-bottom:12px;"><strong>Ace Hotel brand sale:</strong> Ace Group International acquired by Seibu Prince Hotels Worldwide for ~$90M in September 2025. Source: Hotel Dive, Sept 2025; Travel Weekly, Sept 2025.</p>
+      <p style="margin-bottom:12px;"><strong>Caliente Tropics history:</strong> Built 1963, opened 1964 by Ken Kimes Sr. (motel #38 of 45; 5 were Polynesian-themed). Tiki carvings by Ed Crissman of Oceanic Arts (Whittier, CA) — 24 tikis carved from palm trunks on-site. Source: CalienteTropics.com/resort-history; AvoidingRegret.com; TheTikiChick.com; MyTiki.life.</p>
+      <p style="margin-bottom:12px;"><strong>BIA / Agua Caliente lease framework:</strong> Reservation encompasses ~28,000 acres. BIA Palm Springs Agency administers ~1,175 commercial leases, ~7,671 residential subleases, and ~11,118 timeshares (~20,000 total). Leases may not exceed 99 years. Source: BIA.gov/Palm Springs Agency; Epsten APC; 25 CFR Part 162.</p>
+      <p style="margin-bottom:12px;"><strong>BIA lease approval process:</strong> Business leases governed by 25 CFR Part 162, Subpart D. Required documents per §162.438. BIA 30-day review period for complete packages (§162.440). Preliminary Review available under §162.440. NEPA adoption provisions under 43 CFR 46.320. Source: eCFR.gov; BIA.gov.</p>
+      <p style="margin-bottom:12px;"><strong>Interest rate data:</strong> Fed funds effective rate 3.64% (March 2026). Futures curve: ~3.2% by early 2028, ~3.4% by 2030. FOMC Dec 2025 dot plot median for 2027: 3.4% (range 2.4–3.9%). Source: StreetStats.finance; FRED/St. Louis Fed; CME FedWatch.</p>
+      <p style="margin-bottom:12px;"><strong>SBA 504 requirements:</strong> Owner-occupancy 51% for existing buildings. Lease must be subordinate to SBA mortgage. Assignment of rents required as collateral. Source: SBA.gov/504-loans; BLP504.org; FFCFC.com.</p>
+      <p style="margin-bottom:12px;"><strong>Las Brisas Hotel Group credentials:</strong> 90-key BW Plus Las Brisas Hotel, downtown Palm Springs. 83% occupancy, $211 ADR (2024 TTM). Developer of the Year — Starwood Hotels & Resorts. Source: LBHG internal records.</p>
+      <p style="margin-bottom:12px;"><strong>Proforma and financial data:</strong> All financial projections derived from LBHG internal financial model (updated March 2026). Capital stack: $8,645K senior debt (65.8%), $4,000K investor equity (30.4%), $500K GP equity (3.8%).</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>The Tropics — Palm Springs, CA &nbsp;|&nbsp; Las Brisas Hotel Group &nbsp;|&nbsp; Privileged & Confidential</p>
+  <p style="margin-top:6px;">Prepared March 2026 &nbsp;|&nbsp; 92 Keys · $8M Purchase · $4M Investor Equity · $13.1M All-In ($143K/key)</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
